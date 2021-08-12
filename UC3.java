@@ -1,23 +1,24 @@
-package Classes;
+package StackClass;
 
 public class UC3 {
 	Node head;
 
-	// appending data
+	// add element
 	public void addNode(int data) {
 		Node node = new Node(data);
 		if (head == null) {
 			head = node;
 		} else {
-			Node temp = head;
-			while (temp.next != null) {
-				temp = temp.next;
+			Node temp=head;
+			while(temp.next!=null) {
+				temp=temp.next;
 			}
-			temp.next = node;
+			temp.next=node;
 		}
+
 	}
 
-	// list printing
+	// print stack
 	public void printList() {
 		Node temp = head;
 		while (temp != null) {
@@ -26,6 +27,5 @@ public class UC3 {
 		}
 		System.out.println("");
 	}
-
 
 }

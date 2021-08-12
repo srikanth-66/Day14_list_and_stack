@@ -1,8 +1,9 @@
-package Classes;
+package StackClass;
 
 public class UC4 {
 	Node head;
 
+	//adding queue element
 	public void addNode(int data) {
 		Node node = new Node(data);
 		if (head == null) {
@@ -16,17 +17,7 @@ public class UC4 {
 		}
 	}
 
-	// inserting data in between
-	public void insertInBetween(int data) {
-		Node node = new Node(data);
-		Node temp = head;
-		temp = temp.next;
-		head.next = node;
-		node.next = temp;
-
-	}
-
-	// list printing
+	//queue printing
 	public void printList() {
 		Node temp = head;
 		while (temp != null) {
@@ -36,5 +27,13 @@ public class UC4 {
 		System.out.println("");
 	}
 
-
+	//deleting element 
+		public void deleteHead() {
+			System.out.println("deleting head ");
+			Node temp=head;
+			if(temp!=null) {
+				head=temp.next;
+			}
+		}
 }
+

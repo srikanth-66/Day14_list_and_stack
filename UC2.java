@@ -1,10 +1,7 @@
-package Classes;
+package StackClass;
 
 public class UC2 {
-
 	Node head;
-
-	// adding at start
 	public void addNode(int data) {
 		Node node = new Node(data);
 		if (head == null) {
@@ -13,9 +10,9 @@ public class UC2 {
 			node.next = head;
 			head = node;
 		}
+		printList();
 	}
 
-	// list printing
 	public void printList() {
 		Node temp = head;
 		while (temp != null) {
@@ -25,5 +22,11 @@ public class UC2 {
 		System.out.println("");
 	}
 
-
+	public void deleteHead() {
+		System.out.println("deleting head node");
+		Node temp=head;
+		if(temp!=null) {
+			head=temp.next;
+		}
+	}
 }
